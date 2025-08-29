@@ -10,42 +10,70 @@ Descripion: Write a program that prompts the user for two integer numbers
 int main(void)
 {
 	int number1_int = 0, number2_int = 0, number3_int = 0;
-		double number1_float = 0.0, number2_float = 0.0; 
-	printf("Enter two integer values: ");
-	scanf("%d%d", &number1_int, &number2_int); 
-	printf("Enter two floating-point values: ");
-	scanf("%lf%lf", &number1_float, &number2_float);
-	int sum = number1_int + number2_int;
-	printf("sum %d\n",sum);
-	sum = number1_int - number2_int;
-	printf("subtract %d\n", sum);
-	sum = number1_int * number2_int;
-	printf("multiplied %d\n", sum);
-	sum = number1_int / number2_int;
-	printf("divided %d\n", sum);
-	sum = number1_int / number2_float;
-	printf("divided float %d\n", sum);
-	double dsum = (double)number1_int / number2_int;
-	printf("casted %.2lf\n", dsum);
-	sum = (int) number1_float % (int) number2_float;
-	printf("mod %d\n", sum);
-	sum = number1_int % 2;
-	printf("Even or Odd %d\n", sum);
-	sum = number2_int % 2;
-	printf("Even or Odd %d\n", sum);
-	int Vsum = number1_int * number2_int;
-	printf("Voltage %d\n", Vsum);
-	int Psum = (number1_int * number2_int) * (number1_int * number2_int) / number2_int;
-	printf("Power %d\n", Psum);
-	int x_int = 0, a_int = 0, b_int = 0, c_int = 0, d_int = 0;
-	printf("Enter 6 integer values: ");
-	scanf("%d%d%d%d%d", &x_int, &a_int, &b_int, &c_int, &d_int);
-	sum = 3 *((a_int * x_int) ^ 3 + (1 / 4) * (b_int * x_int) ^ 2 + 10 * (c_int * x_int) + (-5) * d_int);
-	printf("Y = %d\n", sum);
-	int R_int = 0;
-	printf("Enter Radius: ");
-	scanf("%d", &R_int);
-	sum = (2 * 3.14 * R_int);
-	printf("Circumferance= %d\n", sum);
-	return 0;
-} 
+	double number1_float = 0.0, number2_float = 0.0;
+
+printf("Enter two integer values to be added together: ");
+scanf("%d%d", &number1_int, &number2_int);
+int sum = number1_int + number2_int;
+printf("sum %d\n", sum);
+
+printf("Enter two integer values to be subtracted: ");
+scanf("%d%d", &number1_int, &number2_int);
+sum = number1_int - number2_int;
+printf("subtract %d\n", sum);
+
+printf("Enter two integer values to be multiplied: ");
+scanf("%d%d", &number1_int, &number2_int);
+sum = number1_int * number2_int;
+printf("multiplied %d\n", sum);
+
+printf("Enter two integer values to be divided: ");
+scanf("%d%d", &number1_int, &number2_int);
+sum = number1_int / number2_int;
+printf("divided %d\n", sum);
+
+printf("Enter integer value and then float value: ");
+scanf("%d%lf", &number1_int , &number2_float);
+double fsum = number1_int / number2_float;
+printf("divided float %lf\n", fsum);
+
+printf("Enter two integer values to be casted: ");
+scanf("%d%d", &number1_int, &number2_int);
+double dsum = (double)number1_int / number2_int;
+printf("casted %.2lf\n", dsum);
+
+printf("Enter two integer values to be modded: ");
+scanf("%lf%lf", &number1_float, &number2_float);
+sum = (int)number1_float % (int)number2_float;
+printf("mod %d\n", sum);
+
+printf("Enter two integer values to be checked for Even or Odd: ");
+scanf("%d%d", &number1_int, &number2_int);
+sum = number1_int % 2;
+printf("Even or Odd %d\n", sum);
+sum = number2_int % 2;
+printf("Even or Odd %d\n", sum);
+
+printf("Enter two integer values, first is current, second is resistance: ");
+scanf("%d%d", &number1_int, &number2_int);
+int Vsum = number1_int * number2_int;
+printf("Voltage %d\n", Vsum);
+
+int Psum = (number1_int * number2_int) * (number1_int * number2_int) / number2_int;
+printf("Power %d\n", Psum);
+
+
+int x_int = 0, a_int = 0, b_int = 0, c_int = 0, d_int = 0;
+printf("Enter 6 integer values: ");
+scanf("%d%d%d%d%d", &x_int, &a_int, &b_int, &c_int, &d_int);
+sum = 3 * ((a_int * x_int) ^ 3 + (1 / 4) * (b_int * x_int) ^ 2 + 10 * (c_int * x_int) + (-5) * d_int);
+printf("Y = %d\n", sum);
+
+int R_int = 0;
+printf("Enter Radius: ");
+scanf("%d", &R_int);
+sum = (2 * 3.14 * R_int);
+printf("Circumferance= %d\n", sum);
+	
+return 0;
+}
