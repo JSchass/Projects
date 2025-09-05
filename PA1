@@ -1,0 +1,54 @@
+/*
+Author - John Paul Schaasen
+Section - 1
+Date - 9/4/25
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <math.h>
+#define PI 3.14159 
+
+int main(void)
+{
+char plaintext_character = '\0';
+
+double sales_tax_rate = 0.0, item_cost = 0.0, length = 0.0, width = 0.0, height = 0.0;
+double x1 = 0.0, y1 = 0.0, x2 = 0.0, y2 = 0.0;
+
+int resistor1 = 0, resistor2 = 0, resistor3 = 0, shift_int = 0;
+
+printf("Enter 3 resistor values: ");
+scanf("%d%d%d", &resistor1, &resistor2, &resistor3);
+int resistor_sum = resistor1 + resistor2 + resistor3;
+printf("Total Series Resistance: %d\n", resistor_sum);
+
+printf("Enter sales tax rate then item cost: ");
+scanf("%lf%lf", &sales_tax_rate, &item_cost);
+double total_sales_tax = sales_tax_rate * item_cost;
+printf("Total Sales Tax %.2lf\n", total_sales_tax);
+
+printf("Enter length width and height: ");
+scanf("%lf%lf%lf", &length, &width, &height);
+double volume = (length * width * height) / 3;
+printf("Volume: %.2lf\n", volume);
+
+double Total_parallel_resistance = 1 / (1 / (double)resistor1 + 1 / (double)resistor2 + 1 / (double)resistor3);
+printf("Total Parallel Resistance: %.2lf\n", Total_parallel_resistance);
+
+printf("Enter your plaintext character: ");
+scanf(" %c", &plaintext_character);
+printf("Enter your shift integer: ");
+scanf(" %d", &shift_int);
+int encoded_character = (plaintext_character - 'a') + 'A' - shift_int;
+printf("Encoded character: %c\n", encoded_character);
+
+printf("Enter point 1 (x1 y1): ");
+scanf("%lf%lf", &x1, &y1);
+printf("Enter point 2 (x2 y2): ");
+scanf("%lf%lf", &x2, &y2);
+double distance = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+printf("Distance: %.2lf\n", distance);
+return 0;
+}
